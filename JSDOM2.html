@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS Dom 2</title>
+        <style>
+            h1 {
+                text-align: center;
+                color: red;
+                text-decoration:underline black;
+                margin:25px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>CSS Style using Javascript</h1>
+                <div class="gp">
+                    Grand Parent
+                    <div class="p">
+                        Parent
+                        <div class="c">
+                            Child
+                            <div class="gc">
+                                Grand Child
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+    <script>
+        document.body.style.margin='0px';
+
+
+        var a = document.querySelector('.gc');
+        a.closest('.gp').style.border = '2px solid black';
+        a.closest('.gp').style.fontSize = '2rem';
+        a.closest('.gp').style.textAlign = 'center';
+        a.closest('.gp').style.backgroundColor = 'red';
+        a.closest('.p').style.border = '2px solid black';
+        a.closest('.p').style.backgroundColor = 'pink';
+        a.closest('.c').style.backgroundColor = 'violet';
+        a.closest('.c').style.border = '2px solid black';
+        a.closest('.gc').style.border = '2px solid black';
+        a.closest('.gc').style.backgroundColor = 'grey';
+    </script>            
+
+    </body>
+</html>
